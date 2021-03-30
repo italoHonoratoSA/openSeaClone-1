@@ -1,4 +1,8 @@
 import React from 'react';
+import { Switch,Route } from 'react-router-dom'
+
+import Home from '../Home'
+import Navigation from '../Navigation'
 
 
 
@@ -6,7 +10,12 @@ const App =()=>{
 
 
   return(
-    <h1>This is from the app</h1>
+    <>
+    <Navigation/>
+    <Switch>
+      <Route exact path='/' component={Home} />
+    </Switch>
+    </>
   )
 }
 
