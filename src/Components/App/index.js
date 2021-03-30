@@ -10,12 +10,12 @@ const App =()=>{
 
 
   return(
-    <>
+    <div>
     <Navigation/>
     <Switch>
       <Route exact path='/' component={Home} />
     </Switch>
-    </>
+    </div>
   )
 }
 
