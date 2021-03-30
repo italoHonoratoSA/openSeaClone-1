@@ -18,10 +18,12 @@ const IconContainer = styled.div`
   align-items:center;
   justify-content:center;
   padding:5px 7px 9px 7px;
+  cursor:pointer;
 `
 const ArrowContainer = styled.div`
   transition:all 0.3s;
   transform:${({state})=> state ? 'rotate(180deg)':'rotate(0deg)' };
+  cursor:pointer;
   display:flex;
   align-items:center;
   justify-content:center;

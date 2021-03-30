@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Icon from './Icon'
+import Form from './Form'
 
 
 const Container = styled.nav`
@@ -24,6 +25,7 @@ const Navigation =()=>{
   return(
     <Container>
       <Icon/>
+      <Form/>
     </Container>
   )
 }
