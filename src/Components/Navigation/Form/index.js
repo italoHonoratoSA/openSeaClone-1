@@ -6,6 +6,9 @@ import CloseIcon from '@material-ui/icons/Close';
 const Container = styled.div`
 
   width:100%;
+  @media only screen and (min-width: 1030px) {
+    width:50%;
+}
 `
 
 const Input = styled.input`
@@ -42,7 +45,7 @@ const CloseContainer = styled.div`
 `
 const SubContainer = styled.div`
   position:relative;
-  width:90%;
+  width:100%;
   display:flex;
   align-items:center;
 

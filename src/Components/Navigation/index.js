@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Icon from './Icon'
 import Form from './Form'
+import Links from './Links'
 
 
 const Container = styled.nav`
@@ -15,6 +16,7 @@ const Container = styled.nav`
   width:100%;
   display:flex;
   align-items:center;
+  justify-content:space-between;
 
 `
 
@@ -26,6 +28,7 @@ const Navigation =()=>{
     <Container>
       <Icon/>
       <Form/>
+      <Links/>
     </Container>
   )
 }

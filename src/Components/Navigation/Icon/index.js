@@ -28,7 +28,21 @@ const ArrowContainer = styled.div`
   align-items:center;
   justify-content:center;
 
+  @media only screen and (min-width: 1030px) {
+    display:none;
+}
 
+`
+
+const Text = styled.div`
+  font-size:20px;
+  font-weight:600;
+  display:none;
+  margin-left:5px;
+  margin-right:10px;
+  @media only screen and (min-width: 1030px) {
+    display:block;
+}
 `
 
 
@@ -45,6 +59,7 @@ const Icon =()=>{
       <ArrowContainer onClick={()=>setState(!state)} state={state}>
         <KeyboardArrowDownIcon style={{fontSize:'30px'}}/>
       </ArrowContainer>
+      <Text>OpenLand</Text>
     </Container>
   )
 }
