@@ -1,8 +1,10 @@
 import React,{useState} from 'react';
 import styled from 'styled-components'
+import {connect} from 'react-redux'
 
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import mobileActionCreators from '../../../Redux/ActionCreators/MobileNavActionCreators'
 
 const Container = styled.div`
   display:flex;
@@ -46,9 +48,7 @@ const Text = styled.div`
 `
 
 
-const Icon =()=>{
-
-  const [state,setState] =useState(false);
+const Icon =({toggle,show})=>{
 
 
   return(
@@ -56,7 +56,7 @@ const Icon =()=>{
       <IconContainer>
         <FilterHdrIcon style={{fontSize:'30px'}}/>
       </IconContainer>
-      <ArrowContainer onClick={()=>setState(!state)} state={state}>
+      <ArrowContainer onClick={()=>toggle()} state={show}>
         <KeyboardArrowDownIcon style={{fontSize:'30px'}}/>
       </ArrowContainer>
       <Text>OpenLand</Text>
@@ -64,5 +64,17 @@ const Icon =()=>{
   )
 }
 
+const mapDispatchToProps ={
+  toggle:mobileActionCreators.show
+}
 
-export default Icon
+const mapToState =(state)=>{
+
+  return{
+      show:state.mobileNavReducer.show
+  }
+}
+
+const ConnectedIcon = connect(mapToState,mapDispatchToProps)(Icon)
+
+export default ConnectedIcon

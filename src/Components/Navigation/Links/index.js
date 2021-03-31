@@ -11,7 +11,7 @@ width:45%;
   display:block;
 }
 `
-const data = ['Browser','Activity','Rankings','Blog','Community','Create',<AccountCircleIcon style={{'font-size':'30px'}}/>]
+const data = ['Browser','Activity','Rankings','Blog','Community','Create',<AccountCircleIcon style={{fontSize:'30px'}}/>]
 
 const UnorderedList =styled.ul`
   height:100%;
@@ -30,6 +30,7 @@ const Item = styled.li`
   display:flex;
   align-items:center;
   justify-content:center;
+  cursor:pointer;
 `
 
 

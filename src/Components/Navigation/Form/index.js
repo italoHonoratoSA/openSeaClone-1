@@ -58,14 +58,14 @@ const Form =()=>{
   return(
     <Container>
       <FormContainer>
-        <label for="searching"/>
+        <label htmlFor="searching"/>
         <SubContainer>
         <IconContainer>
-          <SearchIcon style={{'font-size':'27px'}}/>
+          <SearchIcon style={{fontSize:'27px'}}/>
         </IconContainer>
             <Input type="text" id="searching" name="searching" onClick={()=>setState(!state)}/>
             <CloseContainer state={state}>
-              <CloseIcon style={{'font-size':'27px'}}/>
+              <CloseIcon style={{fontSize:'27px'}}/>
             </CloseContainer>
         </SubContainer>
       </FormContainer>
