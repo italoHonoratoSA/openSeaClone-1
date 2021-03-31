@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components';
 import {connect} from 'react-redux';
 
+import MobileLinks from './MobileLinks'
+
 const Container = styled.div`
-  background-color:red;
+  background-color:rgb(32, 129, 226);
   height:${({state})=> state ? '100%':'0'};
-  opacity:${({state})=> state ? '1':'0'};
 
   transition:all 0.35s;
   overflow:hidden;
@@ -20,7 +21,7 @@ const Container = styled.div`
 const MobileNavigation =({show})=>{
   return(
     <Container state={show}>
-      <h2>WHERE IS THIS THING</h2>
+      <MobileLinks/>
     </Container>
   )
 }
