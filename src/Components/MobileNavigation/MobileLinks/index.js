@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import {connect} from 'react-redux'
+
+import mobileActionCreators from '../../../Redux/ActionCreators/MobileNavActionCreators'
 
 const Container = styled.div`
   display:flex;
@@ -19,34 +22,54 @@ const Items = styled.div`
   display:flex;
   align-items:center;
   justify-content:space-between;
+
+
 `
 
 const IconContainer = styled.div`
   padding-right:15px;
 `
+const ItemContainer = styled.div`
+  display:flex;
+`
 
 
-
-const data1 =[{title:'Browse'},{title:'Activity'},{title:'Rankings'},
-{title:'Blog'},
-{title:'Community',icon:<NavigateNextIcon style={{fontSize:"30px"}}/>},
-{title:'Create',icon:<NavigateNextIcon style={{fontSize:"30px"}}/>},
-{title:'Account',icon:<NavigateNextIcon style={{fontSize:"30px"}}/>}]
-
-const MobileLinks =()=>{
+const MobileLinks =({links,next})=>{
 
   return(
     <Container>
       {
-        data1.map((item,index)=>{
-          return(<Items key={index}>
-              {item.title}
-              <IconContainer>{item.icon}</IconContainer></Items>)
+        links.map((item,index)=>{
+          return(
+            <ItemContainer key={index} onClick={()=>{next(item.payload)}}>
+            {
+              item.icon
+                ?
+                <Items>
+                  {item.title}
+                  <IconContainer>{item.icon}</IconContainer>
+                  </Items>
+                :
+                <Items >{item.title}</Items>
+            }
+            </ItemContainer>
+          )
         })
       }
     </Container>
   )
 }
 
+const mapStateToProps = (state)=>{
+  return{
+      links:state.mobileLinksReducer.linksData
+  }
+}
 
-export default MobileLinks
+const mapDispatchToProps ={
+  next:mobileActionCreators.next
+}
+
+const ConnectedMobileLinks = connect(mapStateToProps,mapDispatchToProps)(MobileLinks)
+
+export default ConnectedMobileLinks

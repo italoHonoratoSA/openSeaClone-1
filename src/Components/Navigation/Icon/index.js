@@ -50,7 +50,6 @@ const Text = styled.div`
 
 const Icon =({toggle,show})=>{
 
-
   return(
     <Container>
       <IconContainer>

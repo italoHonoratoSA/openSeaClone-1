@@ -11,6 +11,12 @@ const mobileActionCreators =(()=>{
       return{
         type:types.showFalse
       }
+    },
+    next(payload){
+      return{
+        type:types.next,
+        payload:payload
+      }
     }
   }
 })()

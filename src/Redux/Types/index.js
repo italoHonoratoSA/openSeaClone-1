@@ -1,7 +1,12 @@
 
 const types ={
   showTrue:'TRUE',
-  showFalse:"FALSE"
+  showFalse:"FALSE",
+  account:"ACCOUNTS",
+  community:'COMMUNITY',
+  create:'CREATE',
+  next:"NEXT",
+
 }
 
 
