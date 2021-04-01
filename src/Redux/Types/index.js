@@ -6,6 +6,7 @@ const types ={
   community:'COMMUNITY',
   create:'CREATE',
   next:"NEXT",
+  back:"BACK"
 
 }
 

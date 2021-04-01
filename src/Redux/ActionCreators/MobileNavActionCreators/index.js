@@ -17,6 +17,12 @@ const mobileActionCreators =(()=>{
         type:types.next,
         payload:payload
       }
+    },
+    back(){
+      return{
+        type:types.back,
+        payload:types.back
+      }
     }
   }
 })()
