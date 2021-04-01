@@ -14,6 +14,9 @@ const Container = styled.div`
   width:100vw;
   top:72px;
   position:fixed;
+  @media only screen and (min-width: 1030px) {
+    display:none;
+}
 `
 
 
