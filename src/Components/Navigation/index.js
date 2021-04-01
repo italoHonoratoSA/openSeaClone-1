@@ -5,6 +5,7 @@ import Icon from './Icon'
 import Form from './Form'
 import Links from './Links'
 import MobileNavigation from '../MobileNavigation'
+import HeaderLinks from './HeaderLinks'
 
 
 const Container = styled.nav`
@@ -32,6 +33,7 @@ const Navigation =()=>{
       <Form/>
       <Links/>
     </Container>
+    <HeaderLinks/>
     <MobileNavigation/>
     </>
   )
